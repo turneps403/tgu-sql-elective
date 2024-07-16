@@ -10,7 +10,9 @@ CREATE OR REPLACE FUNCTION get_cashback_detailed(date_start date, date_end date,
         is_plan varchar(4)
     )
 LANGUAGE sql AS $$
+    -- with не работает с plpgsql
     WITH res AS (
+        -- основые вычисления по кешбеку
         SELECT 
             crdop.TranDateTime as tran_datetime,
             inst.Code as client_code,
@@ -30,6 +32,7 @@ LANGUAGE sql AS $$
             crdop.TranDateTime BETWEEN $1 AND $2 + interval '23 hours 59 minutes 59 seconds' 
             AND inst.Code = $3
       )
+    -- фактически - упорядоченное представление полученных результатов
     SELECT 
         tran_datetime,
         client_code,
