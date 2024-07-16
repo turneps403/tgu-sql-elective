@@ -7,6 +7,13 @@
 1. Изменение структуры БД [create_cashback_feature_tables.sql](/create_cashback_feature_tables.sql)
 2. Наполнение первичными данными [populate_cashback_categories.sql](populate_cashback_categories.sql)
 
+### Контрольная точка №2
+
+Список файлов:
+
+1. Создание триггера и триггерной функции [create_cashback_trigger.sql](create_cashback_trigger.sql)
+
+
 ### Postgres
 
 Все запросы проверялись на образе `postgres:14`
