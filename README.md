@@ -13,7 +13,7 @@
 
 1. Создание триггера и триггерной функции [create_cashback_trigger.sql](create_cashback_trigger.sql)
 2. Создание хранимой процедуры [cron_cashback_procedure.sql](cron_cashback_procedure.sql)
-
+3. Табличная функция детализированного отчета [report_cacheback_table_func.sql](report_cacheback_table_func.sql)
 
 ### Postgres
 
